@@ -1,0 +1,13 @@
+// Criando uma macro de nome "imprimirNoDisplay".
+#define imprimirNoDisplay(valor){\
+    ClearScreen();\
+    TextOut(0, LCD_LINE1,  valor);\
+}
+
+// Tarefa Principal.
+task main(){
+    // Chama a funcao (macro) passando um valor como parametro.
+    imprimirNoDisplay("Hello World");
+    // Espera 10 segundos.
+    Wait(10000);
+}

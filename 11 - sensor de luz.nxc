@@ -1,0 +1,25 @@
+// Definindo um valor para ser usado junto ao sensor de luz.
+#define INTEN_MAX 40
+#define VEL_MAX -35
+
+// Tarefa Principal.
+task main(){
+   // Definindo que na porta 2 ou "IN_2" tem-se um sensor de luz.
+   SetSensorLight(IN_2); // ou SetSensor(IN_2, SENSOR_COLORRED);
+   // Ativa o movimento dos motores nas portas "A e C".
+   OnFwd(OUT_AC, VEL_MAX);
+   // Estrutura de repeticao "While", com resultado da condicao sempre "True" (verdade).
+   while(true){
+      // Estrutura Condicional "IF", que avalia a intensidade do sensor de luz.
+      if (Sensor(IN_2) > INTEN_MAX){
+         // Ativa o motor na porta "C" no sentido anti-horario.
+         OnRev(OUT_A, VEL_MAX);
+         // Espera 100 milissegundos.
+         Wait(100);
+         // Aguarda ate que a condicao avaliada seja atendida
+         until(Sensor(IN_2) <= INTEN_MAX);
+         // Ativa o motor na porta "A e C" no sentido horario.
+         OnFwd(OUT_AC, VEL_MAX);
+      }
+   }
+}
