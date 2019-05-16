@@ -1,0 +1,12 @@
+
+// Tarefa Principal.
+task main(){
+     // Definindo que na porta 1 ou "IN_1" tem-se um sensor de toque.
+     SetSensor(IN_1, SENSOR_TOUCH);
+     // Ativa o movimento dos motores nas portas "A e C".
+     OnFwd(OUT_AC, 75);
+     // Espera ate o "SENSOR_1" ou sensor de toque na porta um seja pressionado.
+     until (SENSOR_1 == 1);
+     // Desativa os motores nas portas "A e C".
+     Off(OUT_AC);
+}

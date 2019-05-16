@@ -1,0 +1,32 @@
+
+// Tarefa Principal.
+task main(){
+    // Definindo o sensor de cor hitechnic esta na porta 2 e com o modo de cor ativo.
+    SetHTColor2Mode(IN_2, HT_CMD_COLOR2_ACTIVE);
+    // Definindo que o sensor de cor na porta 2 deve ser usado no modo velocidade baixa.
+    SetSensorLowspeed(IN_2);
+    // Definindo o sensor de cor hitechnic esta na porta 3 e com o modo de cor ativo
+    SetHTColor2Mode(IN_3, HT_CMD_COLOR2_ACTIVE);
+    // Definindo que o sensor de cor na porta 3 deve ser usado no modo velocidade baixa.
+    SetSensorLowspeed(IN_3);
+    // Variaveis que armazenam as cores de cada sensor.
+    byte S2ColorNum, S2Red, S2Green, S2Blue;
+   	byte S3ColorNum, S3Red, S3Green, S3Blue;
+    string leitura_cor_s2 = "", leitura_cor_s3 = "";
+    // Estrutura de repeticao "While" usado como loop infinito.
+   	while(true){
+        // Lendo sensor de cor da porta 3 e atribuindo os valores nas variaveis S2...
+        ReadSensorHTColor(IN_2, S2ColorNum, S2Red, S2Green, S2Blue);
+        // Lendo sensor de cor da porta 2 e atribuindo os valores nas variaveis S3...
+        ReadSensorHTColor(IN_3, S3ColorNum, S3Red, S3Green, S3Blue);
+        // Atribuindo os valores de cada cor em unica "String" (cadeia de caracteres).
+        leitura_cor_s2 = NumToStr(S2ColorNum) + "," + NumToStr(S2Red) + "," + NumToStr(S2Green) + "," + NumToStr(S2Blue);
+        leitura_cor_s3 = NumToStr(S3ColorNum) + "," + NumToStr(S3Red) + "," + NumToStr(S3Green) + "," + NumToStr(S3Blue);
+        // Mostra no display lcd os valores capturados pelos sensores de cor.
+        TextOut(0, LCD_LINE1, "CN, R, G, B");
+        TextOut(0, LCD_LINE3, leitura_cor_s2);
+        TextOut(0, LCD_LINE5, leitura_cor_s3);
+        // Espera meio segundo.
+        Wait(500);
+    }
+}
