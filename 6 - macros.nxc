@@ -5,7 +5,7 @@
     TextOut(0, LCD_LINE1,  valor);\
 }
 
-// Tarefa Principal.
+// Tarefa principal.
 task main(){
     // Chama a funcao (macro) passando um valor como parametro.
     imprimirNoDisplay("Hello World");
