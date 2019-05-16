@@ -1,5 +1,5 @@
 
-// Tarefa Principal.
+// Tarefa principal.
 task main(){
 
     // Variavel que guarda o valor do tempo que sera usado no delay (Wait).
