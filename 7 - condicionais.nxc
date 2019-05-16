@@ -1,5 +1,5 @@
 
-// Tarefa Principal.
+// Tarefa principal.
 task main(){
     // Definindo as variaveis "A e B" do tipo inteiro.
     int a = 2, b = 1;
