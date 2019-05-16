@@ -1,5 +1,5 @@
 
-// Tarefa Principal.
+// Tarefa principal.
 task main(){
      // Definindo que na porta 1 ou "IN_1" tem-se um sensor de toque.
      SetSensor(IN_1, SENSOR_TOUCH);
