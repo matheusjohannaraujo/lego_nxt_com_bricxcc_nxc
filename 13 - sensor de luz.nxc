@@ -3,7 +3,7 @@
 #define INTEN_MAX 40
 #define VEL_MAX -35
 
-// Tarefa Principal.
+// Tarefa principal.
 task main(){
    // Definindo que na porta 2 ou "IN_2" tem-se um sensor de luz.
    SetSensorLight(IN_2); // pode ser usado o "SetSensor(IN_2, SENSOR_LIGHT)" (led vermelho desligado) ou "SetSensor(IN_2, SENSOR_NXTLIGHT)" (led vermelho ligado).
