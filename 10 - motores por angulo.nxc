@@ -1,5 +1,5 @@
 
-// Tarefa Principal.
+// Tarefa principal.
 task main(){
      // Estrutura de repeticao "While" usado como loop infinito.
      while(true){
