@@ -1,5 +1,5 @@
 
-// Tarefa Principal.
+// Tarefa principal.
 task main(){
      // Definindo que na porta 2 (dois), tem-se um sensor de ultrassonico.
      SetSensorUltrasonic(IN_2);
