@@ -1,5 +1,5 @@
 
-// Tarefa Principal.
+// Tarefa principal.
 task main(){
     // Definindo o sensor de cor hitechnic esta na porta 2 e com o modo de cor ativo.
     SetHTColor2Mode(IN_2, HT_CMD_COLOR2_ACTIVE);
