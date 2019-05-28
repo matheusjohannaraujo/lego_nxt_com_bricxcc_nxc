@@ -1,0 +1,47 @@
+
+// Tarefa principal.
+task main(){
+   // Variaveis para armazenar os valores dos sensores de luz no modo luz ambiente.
+   int s2_luz_ambiente = 0, s3_luz_ambiente = 0;
+   // Variaveis para armazenar os valores dos sensores de luz no modo luz refletida.
+   int s2_luz_refletida = 0, s3_luz_refletida = 0;
+   // Variaveis para armazenar os valores dos sensores de luz no modo luz ambiente e refletida.
+   string s2_luz_ambiente_e_refletida = "", s3_luz_ambiente_e_refletida = "";
+   // Estrutura enquanto "while", com teste logico sempre verdadeiro (loop infinito).
+   while(true){
+      // Definindo que na porta 2 ou "IN_2" tem-se um sensor de luz e deve ser usado no tipo luz inativa (modo de luz ambiente).
+      SetSensorType(IN_2, IN_TYPE_LIGHT_INACTIVE);
+      // Definindo que na porta 2 ou "IN_2" tem-se um sensor de luz e o valor da leitura deve ser um "RAW" (valor de 0 ate 1023).
+      SetSensorMode(IN_2, IN_MODE_RAW);
+      // Definindo que na porta 3 ou "IN_3" tem-se um sensor de luz e deve ser usado no tipo luz inativa (modo de luz ambiente).
+      SetSensorType(IN_3, IN_TYPE_LIGHT_INACTIVE);
+      // Definindo que na porta 3 ou "IN_3" tem-se um sensor de luz e o valor da leitura deve ser um "RAW" (valor de 0 ate 1023).
+      SetSensorMode(IN_3, IN_MODE_RAW);
+      // Lendo o sensor da porta 2 ou "IN_2" no modo "RAW" (valor de 0 atÃ© 1023) e armazenando o valor na variavel "s2_luz_ambiente".
+      s2_luz_ambiente = SensorRaw(IN_2);
+      // Lendo o sensor da porta 3 ou "IN_3" no modo "RAW" (valor de 0 atÃ© 1023) e armazenando o valor na variavel "s3_luz_ambiente".
+      s3_luz_ambiente = SensorRaw(IN_3);
+      // Espera 30ms.
+      Wait(30);
+      // Definindo que na porta 2 ou "IN_2" tem-se um sensor de luz e deve ser usado no tipo luz ativa (modo de luz refletida).
+      SetSensorType(IN_2, IN_TYPE_LIGHT_ACTIVE);
+      // Definindo que na porta 2 ou "IN_2" tem-se um sensor de luz e o valor da leitura deve ser um "RAW" (valor de 0 ate 1023).
+      SetSensorMode(IN_2, IN_MODE_RAW);
+      // Definindo que na porta 3 ou "IN_3" tem-se um sensor de luz e deve ser usado no tipo luz ativa (modo de luz refletida).
+      SetSensorType(IN_3, IN_TYPE_LIGHT_ACTIVE);
+      // Definindo que na porta 3 ou "IN_3" tem-se um sensor de luz e o valor da leitura deve ser um "RAW" (valor de 0 ate 1023).
+      SetSensorMode(IN_3, IN_MODE_RAW);
+      // Lendo o sensor da porta 2 ou "IN_2" no modo "RAW" (valor de 0 atÃ© 1023) e armazenando o valor na variavel "s2_luz_refletida".
+      s2_luz_refletida = SensorRaw(IN_2);
+      // Lendo o sensor da porta 3 ou "IN_3" no modo "RAW" (valor de 0 atÃ© 1023) e armazenando o valor na variavel "s3_luz_refletida".
+      s3_luz_refletida = SensorRaw(IN_3);
+      // Espera 30ms.
+      Wait(30);
+      // Definindo que os valores das variaveis "string" devem conter o valor "(LUZ AMBIENTE + LUZ REFLETIDA) / 2 = MEDIA".
+      s2_luz_ambiente_e_refletida = "(" + NumToStr(s2_luz_ambiente) + "+" + NumToStr(s2_luz_refletida) + ")/2=" + NumToStr((s2_luz_ambiente + s2_luz_refletida)/2);
+      s3_luz_ambiente_e_refletida = "(" + NumToStr(s3_luz_ambiente) + "+" + NumToStr(s3_luz_refletida) + ")/2=" + NumToStr((s3_luz_ambiente + s3_luz_refletida)/2);
+      // Mostra no display do NXT o valor das variaveis criadas anteriormente.
+      TextOut(0, LCD_LINE1, s2_luz_ambiente_e_refletida);
+      TextOut(0, LCD_LINE3, s3_luz_ambiente_e_refletida);
+   }   
+}
