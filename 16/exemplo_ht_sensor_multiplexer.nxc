@@ -1,0 +1,38 @@
+#include "SMUX.h"
+
+task main(){
+     SMUX_Define(1);
+     while(true){
+         //Light
+         NumOut(0, LCD_LINE1, SMUX_Sensor_Light(1, 1, 3, false));
+
+         //Color
+         RGB htrgb = SMUX_Sensor_HTColor(1, 2);
+         string strhtrgb = NumToStr(htrgb.cn) +
+                "," + NumToStr(htrgb.r) +
+                "," + NumToStr(htrgb.g) +
+                "," + NumToStr(htrgb.b);
+         TextOut(0, LCD_LINE2, strhtrgb);
+         
+         //Ultrasonic
+         NumOut(0, LCD_LINE3, SMUX_Sensor_Ultrasonic(1, 3));
+
+         //Accel
+         XYZ ht_xyz = SMUX_Sensor_HTAccel(1, 4);
+         string str_ht_xyz = NumToStr(ht_xyz.x) +
+                "," + NumToStr(ht_xyz.y) +
+                "," + NumToStr(ht_xyz.z);
+         TextOut(0, LCD_LINE4, str_ht_xyz);
+
+         //Compass
+         //NumOut(0, LCD_LINE5, SMUX_Sensor_HTCompass(1, 4));
+
+         //Touch
+         //NumOut(0, LCD_LINE5, SMUX_Sensor_Touch(1, 4));
+
+         //Sound
+         //NumOut(0, LCD_LINE5, SMUX_Sensor_Sound(1, 4, false));
+         
+         Wait(100);
+     }
+}

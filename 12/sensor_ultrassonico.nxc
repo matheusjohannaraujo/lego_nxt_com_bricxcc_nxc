@@ -1,0 +1,16 @@
+
+// Tarefa principal.
+task main(){
+     // Definindo que na porta 2 (dois), tem-se um sensor de ultrassonico.
+     SetSensorUltrasonic(IN_2);
+     // Estrutura de repeticao "While" usado como loop infinito.
+     while(true){
+        // Limpa o display do NXT.
+        ClearScreen();
+        // Escreve no display do NXT o valor lido pelo sensor ultrassonico.
+        TextOut(0, LCD_LINE1, "S. Ultrassonico");
+        NumOut(0, LCD_LINE3, SensorUS(IN_2));
+        // Aguarda meio segundo.
+        Wait(500);
+    }
+}
