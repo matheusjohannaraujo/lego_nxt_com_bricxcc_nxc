@@ -7,10 +7,10 @@ State: Pernambuco<br>
 Developer: Matheus Johann Araújo<br>
 Date: 2019-03-21<br>
 
-Exemplos de códigos para LEGO NXT usando o NXC do Bricx Command Center<br>
+Códigos para LEGO NXT usando a linguagem NXC no Bricx Command Center<br>
 Download do software BricxCC em:<br><br>
     http://bricxcc.sourceforge.net<br>
     https://sourceforge.net/projects/bricxcc/files/bricxcc/<br>
     http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/<br>
     
-OBS.: Os exemplos foram escritos em texto plano e sem acentuações!
+OBS.: Os códigos foram escritos em texto plano e sem acentuações!
