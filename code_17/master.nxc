@@ -1,0 +1,13 @@
+#include "BLUETOOTH.h"
+
+task main(){
+    bluetoothConnected('S');
+    while(true){
+        TextOut(0, LCD_LINE1, "Master");
+        string msg = bluetoothSlaveGet();
+        TextOut(0, LCD_LINE3, msg);
+        bluetoothMasterSet(msg);
+        Wait(500);
+        ClearScreen();
+    }
+}

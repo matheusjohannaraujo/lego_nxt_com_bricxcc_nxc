@@ -1,0 +1,12 @@
+#include "BLUETOOTH.h"
+
+task main(){
+    bluetoothConnected('M');
+    for(int i = 0; i < 10000; i++){        
+        bluetoothSlaveSet(NumToStr(i));
+        TextOut(0, LCD_LINE1, "Slave");
+        TextOut(0, LCD_LINE3, bluetoothSlaveGet());        
+        Wait(500);
+        ClearScreen();
+    }
+}
