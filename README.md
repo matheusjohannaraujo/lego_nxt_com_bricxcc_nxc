@@ -5,7 +5,7 @@ GitHub: https://github.com/matheusjohannaraujo/lego_nxt_com_bricxcc_nxc
 Country: Brasil<br>
 State: Pernambuco<br>
 Developer: Matheus Johann Araújo<br>
-Date: 2019-03-21<br>
+Date: 2019.03.21<br>
 
 Códigos para LEGO NXT usando a linguagem NXC no Bricx Command Center<br>
 Download do software BricxCC em:<br><br>
@@ -13,4 +13,4 @@ Download do software BricxCC em:<br><br>
     https://sourceforge.net/projects/bricxcc/files/bricxcc/<br>
     http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/<br>
     
-OBS.: Os códigos foram escritos em texto plano e sem acentuações!
+Obs.: Os códigos foram escritos em texto plano e sem acentuações!
