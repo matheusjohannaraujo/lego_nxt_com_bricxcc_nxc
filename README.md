@@ -13,4 +13,4 @@ Download do software BricxCC em:<br><br>
     https://sourceforge.net/projects/bricxcc/files/bricxcc/<br>
     http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/<br>
     
-Obs.: Os códigos foram escritos em texto plano e sem acentuações!
+Obs.: Os códigos foram escritos em "Pain Text" e sem acentuações!
