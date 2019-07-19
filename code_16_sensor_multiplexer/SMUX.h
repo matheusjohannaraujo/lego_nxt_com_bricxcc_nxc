@@ -135,7 +135,7 @@ bool SMUX(int i){
         TextOut(0, LCD_LINE1, "Scan success!");
         sensor = true;
     }
-    Wait(1500);
+    Wait(1000);
     ClearScreen();
     return sensor;
 }
